@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/main_v_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#5A8EBD"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/main_iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_back"
+        android:translationZ="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/main_iv_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:translationZ="1dp"
+        android:src="@drawable/ic_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/main_siv_imageProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="23dp"
+        android:src="@drawable/im_profile"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/main_siv_bigImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="23dp"
+        android:scaleType="fitXY"
+        android:alpha="0"
+        android:src="@drawable/im_profile"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/main_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        android:text="Mahmoud Akram"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/main_siv_imageProfile"
+        app:layout_constraintTop_toTopOf="@+id/main_siv_imageProfile" />
+
+    <TextView
+        android:id="@+id/main_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="on line"
+        android:textColor="#80FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/main_tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/main_tv_name" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24" />
+
+
+    <TextView
+        android:id="@+id/main_tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="info"
+        android:textColor="#5A8EBD"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/main_tv_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="t.me/theChance101"
+        android:textColor="#202020"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/main_tv_info"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_info" />
+
+    <TextView
+        android:id="@+id/main_tv_inviteLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Invite Link"
+        android:textColor="#83868B"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/main_tv_link"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_link" />
+
+    <View
+        android:id="@+id/main_v_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:background="#E9EBEA"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_inviteLink" />
+
+    <TextView
+        android:id="@+id/main_tv_notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Notifications"
+        android:textColor="#202020"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/main_tv_info"
+        app:layout_constraintTop_toBottomOf="@id/main_v_line" />
+
+    <TextView
+        android:id="@+id/main_tv_switchStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="on"
+        android:textColor="#83868B"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/main_tv_notifications"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_notifications" />
+
+    <Switch
+        android:id="@+id/main_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/main_tv_notifications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_tv_notifications"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <View
+        android:id="@+id/main_v_Line_vertical"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:background="#E9EBEA"
+        app:layout_constraintBottom_toBottomOf="@id/main_tv_notifications"
+        app:layout_constraintEnd_toStartOf="@id/main_switch"
+        app:layout_constraintTop_toTopOf="@id/main_tv_notifications" />
+
+    <View
+        android:id="@+id/main_v_line2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="20dp"
+        android:background="#E9EBEA"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_switchStatus" />
+
+    <TextView
+        android:id="@+id/main_tv_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:text="Media"
+        android:textColor="#3B94D0"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/main_tv_files"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_v_line2" />
+
+    <TextView
+        android:id="@+id/main_tv_files"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Files"
+        android:textColor="#9B9B9B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/main_tv_links"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_tv_media"
+        app:layout_constraintTop_toTopOf="@+id/main_tv_media" />
+
+    <TextView
+        android:id="@+id/main_tv_links"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Links"
+        android:textColor="#9B9B9B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_tv_files"
+        app:layout_constraintTop_toTopOf="@+id/main_tv_files" />
+
+    <LinearLayout
+        android:id="@+id/main_ll_image1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_media">
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/im_profile"/>
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginHorizontal="4dp"
+            android:src="@drawable/im_profile"/>
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/im_profile"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/main_ll_image2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/main_ll_image1">
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/im_profile"/>
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginHorizontal="4dp"
+            android:src="@drawable/im_profile"/>
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/im_profile"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
